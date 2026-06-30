@@ -15,9 +15,9 @@
           <a href="https://1018.3cx.cloud/callus/#olaf" target="_blank" rel="noopener">
             Kontakt
           </a>
-          <a href="https://cal.com/wbgrds/hotline" target="_blank" rel="noopener" class="nav-btn">
+          <button id="nav-termin" style="background: none; border: none; color: inherit; cursor: pointer; font-size: inherit; padding: 0;">
             Termin
-          </a>
+          </button>
         </div>
       </div>
     </nav>
@@ -27,7 +27,9 @@
         <div class="header-text">
           <h1>Olaf Scharfenberg</h1>
           <p>IT-Techniker & Gründer</p>
-          <a class="cta" href="https://cal.com/wbgrds/hotline" target="_blank" rel="noopener">Rückruf vereinbaren</a>
+          <button id="cta-button" style="background: none; border: none; color: inherit; cursor: pointer; font-size: inherit; padding: 0;">
+            <a class="cta" href="#">Rückruf vereinbaren</a>
+          </button>
         </div>
         <div class="header-image">
           <img src="olafscharfenberg.png" alt="Olaf Scharfenberg" />
@@ -50,9 +52,9 @@
         <a href="https://1018.3cx.cloud/callus/#olaf" target="_blank" rel="noopener">
           Kontakt
         </a>
-        <a href="https://cal.com/wbgrds/hotline" target="_blank" rel="noopener">
-          Kalender
-        </a>
+        <button id="footer-termin" style="background: none; border: none; color: inherit; cursor: pointer; font-size: inherit; padding: 0;">
+          <a href="#">Kalender</a>
+        </button>
       </div>
     </footer>
 
@@ -69,6 +71,19 @@
             label: 'Rückruftermin',
             color: '#039BE5'
           });
+
+          // Button Handler für Nav und CTA
+          const handleClick = (e) => {
+            e.preventDefault();
+            const button = document.querySelector('.qxCTlb');
+            if (button) {
+              button.click();
+            }
+          };
+
+          document.getElementById('nav-termin').addEventListener('click', handleClick);
+          document.getElementById('cta-button').addEventListener('click', handleClick);
+          document.getElementById('footer-termin').addEventListener('click', handleClick);
         }
       });
     </script>
